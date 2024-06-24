@@ -84,7 +84,7 @@ class FlxOutlineShader extends FlxShader {
             }
             gl_FragColor = sample * openfl_Alphav;
         }')
-	public function new(width:Float = 1, height:Float = 1) {
+	public function new() {
 		super();
 	}
 }

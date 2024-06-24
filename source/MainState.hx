@@ -19,21 +19,23 @@ class MainState extends FlxState {
 
 		super.create();
 
-		baselineText = new FlxText(16.0, FlxG.height - 16.0, 0.0, 'Lorem ipsum. Or Something.', 16);
+		baselineText = new FlxText(16.0, FlxG.height - 16.0, 0.0, 'This is some normal FlxText!', 16);
 		baselineText.setBorderStyle(OUTLINE, FlxColor.BLACK, 1.5);
 		baselineText.y -= baselineText.height;
 		add(baselineText);
 
-		// normalTextField = new FlxTextField(0.0, baselineText.y, 'This is a FlxTextField', FlxG.width, '_sans', 12, CENTER);
-		// add(normalTextField);
+		normalTextField = new FlxTextField(0.0, 16.0, 'This is a FlxTextField (unused in terms of FlxOutlineText but I was trying).', FlxG.width, '_sans', 12,
+			CENTER);
+		add(normalTextField);
 
-		outlinedText = new FlxOutlineText(-16.0, baselineText.y, FlxG.width, 'This is some FlxOutlineText.', 16);
+		outlinedText = new FlxOutlineText(-16.0, baselineText.y, FlxG.width, 'This is some ok FlxOutlineText!', 16);
 		outlinedText.alignment = RIGHT;
 		outlinedText.outlined = true;
 		outlinedText.outlineSize = 2.0;
 		add(outlinedText);
 
-		var cumTtexx = new FlxOutlineText(16.0, baselineText.y - baselineText.height - 16.0, FlxG.width, 'Lorem ipsum. Or Something.', 16);
+		var cumTtexx = new FlxOutlineText(16.0, baselineText.y - baselineText.height - 16.0, FlxG.width,
+			'This is some less ok FlxOutlineText...\nDecimal outlines don\'t work that well...', 16);
 		cumTtexx.alignment = LEFT;
 		cumTtexx.outlined = true;
 		cumTtexx.outlineColor = FlxColor.BLACK;
